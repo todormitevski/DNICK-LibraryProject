@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row d-flex justify-content-end m-2">
+        <a href="/books/add" class="btn btn-primary">Add new book</a>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            {% for b in books %}
+                <div class="col-md-4 mb-4 d-flex justify-content-center"
+                     style="margin-left: -30px; margin-right: -30px">
+                    <div class="card h-100 p-4" style="width: 18rem">
+                        <a href="/books/{{ b.id }}" style="text-decoration: none; color: black">
+                            <img class="card-img-top shadow" src="{{ b.image.url }}" alt="card_book_image"
+                                 style="height: 300px; object-fit: cover">
+                            <div class="card-body text-center">
+                                <h6 class="card-title">{{ b.title }}</h6>
+                                <p class="card-text">Цена: {{ b.price }} ден.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-sm">
+                <div class="card bg-light justify-content-center align-items-center"
+                     style="max-height: 70vh; max-width: 50vh">
+                    <img src="{{ book.image.url }}" alt="card_book_image"
+                         class="img-fluid p-5"
+                         style="max-height: 70vh; max-width: 40vh">
+                </div>
+            </div>
+            <div class="col-sm">
+                <p class="fw-bolder">Издавачка куќа: {{ book.publisher }}</p>
+                <p class="fw-bolder">Категорија: {{ book.get_book_category_display }}</p>
+                <p class="fw-bolder">ИСБН: {{ book.isbn }}</p>
+                <p class="fw-bolder">Година на издавање: {{ book.year_published }}</p>
+                <p class="fw-bolder">Број на страни: {{ book.num_pages }}</p>
+                <p class="fw-bolder">Димензии {{ book.dimensions }}</p>
+                <p class="fw-bolder">Корица: {{ book.get_book_type_display }}</p>
+                <p class="fw-bolder">Цена: {{ book.price }}</p>
+            </div>
+    </div>
+</div>
+
+
+{% endblock content %}

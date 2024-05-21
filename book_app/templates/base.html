@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+              crossorigin="anonymous">
+    </head>
+    <body style="background-color: #eaebe6">
+        <div class="d-flex justify-content-center align-items-center"
+             style="height:100px; background-color:#0a2550;">
+            <a href="/">
+                <img src="../../static/logo.png" alt="site_logo">
+            </a>
+        </div>
+
+        <div class="text-center text-bold"
+             style="height:40px; background-color:#80a8db; margin-top: -10px">
+            <h3>{{book.title}}</h3>
+        </div>
+
+        <div>
+            {% block content %}{% endblock content%}
+        </div>
+    </body>
+</html>

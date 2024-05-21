@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <form method="POST" action="/books/add/" enctype="multipart/form-data"
+          class="p-5 col-4 d-flex justify-content-center align-items-center"
+          style="flex-direction: column">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="mt-3 btn btn-warning">Add book</button>
+    </form>
+
+{% endblock content %}
